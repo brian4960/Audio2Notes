@@ -216,3 +216,10 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Audio Files
+*.wav
+*.m4a
+*.ogg
+*.flac
+*.mp3
