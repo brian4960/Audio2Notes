@@ -1,4 +1,4 @@
-# rag-lecture-pipeline
+# Lecture2Notes
 A local RAG pipeline that transcribes audio recordings and answers questions using pgvector and Ollama. First, the user uploads an audio recording of their lecture, meeting, etc. Then, they can prompt the model with questions to receieve an answer.
 
 ## Tech Stack
