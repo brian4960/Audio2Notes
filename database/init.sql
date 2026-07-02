@@ -9,9 +9,9 @@ CREATE TABLE IF NOT EXISTS lectures (
 
 CREATE TABLE IF NOT EXISTS chunks (
     id SERIAL PRIMARY KEY,
-    lecture_id INT REFERENCES lectures(id) ON DELETE CASCADE,
-    chunk_text TEXT,
-    embedding VECTOR(384)
+    lecture_id INT REFERENCES lectures(id) ON DELETE CASCADE NOT NULL,
+    chunk_text TEXT NOT NULL,
+    embedding VECTOR(384) NOT NULL
 );
 
 CREATE INDEX ON chunks USING hnsw (embedding vector_cosine_ops);
