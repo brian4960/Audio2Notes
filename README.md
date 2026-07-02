@@ -8,6 +8,7 @@ A local RAG pipeline that transcribes audio recordings and answers questions usi
 - FastAPI
 - Whisper
 - Ollama
+- Gradio
 
 ## How it Works
 ### Phase A - Ingestion Pipeline

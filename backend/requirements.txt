@@ -1,0 +1,6 @@
+fastapi
+openai-whisper
+sentence-transformers
+asyncpg
+ollama
+uvicorn

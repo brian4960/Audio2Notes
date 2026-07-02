@@ -18,6 +18,31 @@ services:
             - driver: nvidia
               count: all
               capabilities: [gpu]
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    depends_on:
+      - database
+      - ollama
+    environment:
+      - DATABASE_HOST=${DATABASE_HOST}
+      - DATABASE_PORT=${DATABASE_PORT}
+      - DATABASE_NAME=${DATABASE_NAME}
+      - DATABASE_USER=${DATABASE_USER}
+      - DATABASE_PASSWORD=${DATABASE_PASSWORD}
+      - OLLAMA_HOST=${OLLAMA_HOST}
+      - OLLAMA_PORT=${OLLAMA_PORT}
+      - OLLAMA_MODEL=${OLLAMA_MODEL}
+  frontend:
+    build: ./frontend
+    ports:
+      - "7860:7860"
+    depends_on:
+      - backend
+    environment:
+      - BACKEND_HOST=${BACKEND_HOST}
+      - BACKEND_PORT=${BACKEND_PORT}
 
 volumes:
   db_data:
