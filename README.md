@@ -1,5 +1,5 @@
 # Audio2Notes
-A local RAG pipeline that transcribes audio recordings and answers questions using pgvector and Ollama. First, the user uploads an audio recording of their lecture, meeting, etc. Then, they can prompt the model with questions to receieve an answer.
+A local RAG pipeline that transcribes audio recordings and answers questions using pgvector and Ollama. First, the user uploads an audio recording of their lecture, meeting, etc. Then, they can prompt the model with questions to receive an answer.
 
 ## Tech Stack
 - Docker & Compose
